@@ -16,24 +16,27 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-md">
-      <div className="container mx-5 flex justify-between items-center py-4 px-6">
-        {/* Logo */}
-        <div className="logo-container">
-          <Link to="/">
-            <img className="w-24" src={LOGO_URL} alt="logo" />
-          </Link>
-        </div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className="flex flex-wrap items-center justify-between py-4">
+          {/* Logo */}
+          <div className="logo-container flex-shrink-0">
+            <Link to="/">
+              <img className="w-20 sm:w-24" src={LOGO_URL} alt="logo" />
+            </Link>
+          </div>
 
-        {/* Navigation */}
-        <nav>
-          <ul className="flex items-center gap-6 text-gray-700 text-sm font-medium ">
-            <li className="flex items-center">
+          {/* Responsive Menu Toggle (optional) */}
+          {/* You may add a hamburger menu icon here for real mobile toggling */}
+
+          {/* Navigation and Online Status */}
+          <ul className="flex flex-wrap items-center gap-4 sm:gap-6 text-gray-700 text-xs sm:text-sm font-medium">
+            <li className="flex items-center whitespace-nowrap">
               {onlineStatus ? (
-                <span className="text-green-600 flex items-center gap-1">
+                <span className="text-green-600 flex items-center gap-1 text-[13px] sm:text-sm">
                   <span className="text-lg">🟢</span> Online
                 </span>
               ) : (
-                <span className="text-red-600 flex items-center gap-1">
+                <span className="text-red-600 flex items-center gap-1 text-[13px] sm:text-sm">
                   <span className="text-lg">🔴</span> Offline
                 </span>
               )}
@@ -42,7 +45,7 @@ const Header = () => {
             <li>
               <Link
                 to="/"
-                className="hover:text-yellow-500 text-[15px] transition-colors duration-200"
+                className="hover:text-yellow-500 transition-colors duration-200"
               >
                 Home
               </Link>
@@ -50,7 +53,7 @@ const Header = () => {
             <li>
               <Link
                 to="/Grocery"
-                className="hover:text-yellow-500 text-[15px] transition-colors duration-200"
+                className="hover:text-yellow-500 transition-colors duration-200"
               >
                 Grocery
               </Link>
@@ -58,7 +61,7 @@ const Header = () => {
             <li>
               <Link
                 to="/about"
-                className="hover:text-yellow-500  text-[15px] transition-colors duration-200"
+                className="hover:text-yellow-500 transition-colors duration-200"
               >
                 About
               </Link>
@@ -66,25 +69,25 @@ const Header = () => {
             <li>
               <Link
                 to="/contact"
-                className="hover:text-yellow-500 text-[15px] transition-colors duration-200"
+                className="hover:text-yellow-500 transition-colors duration-200"
               >
                 Contact
               </Link>
             </li>
-
             <li>
               <Link
                 to="/cart"
-                className="text-gray-600 hover:text-yellow-500 transition-colors duration-200 text-[15px]"
                 aria-label="Shopping Cart"
+                className="text-gray-600 hover:text-yellow-500 transition-colors duration-200 text-lg"
               >
                 <i className="fa-solid fa-cart-shopping"></i>
               </Link>
             </li>
 
-            <li className="mr-4 px-4">
+            {/* Login Button */}
+            <li className="ml-2">
               <button
-                className="bg-yellow-500 w-22 hover:bg-yellow-600 text-white font-semibold text-[15px] rounded transition-colors duration-200 px-2 py-2 text-center"
+                className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold text-sm sm:text-[15px] rounded px-3 sm:px-4 py-1.5 sm:py-2 transition-colors duration-200 whitespace-nowrap"
                 onClick={() =>
                   btnName === "Login"
                     ? setBtnName("Logout")
