@@ -4,7 +4,7 @@ const Footer = () => {
       <span>
         Developed by&nbsp;
         <a
-          href="https://portfolio-rohit-maurya-webdev.netlify.app/"
+          href="https://portfolio-rohit-maurya.netlify.app/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-600 hover:text-blue-800 font-medium underline"
