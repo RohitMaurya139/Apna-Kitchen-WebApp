@@ -1,0 +1,332 @@
+/* ===================================
+   🧼 RESET & BASE STYLES
+=================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* ✨ Clean sans-serif font */
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===================================
+   🧭 HEADER SECTION STYLES
+=================================== */
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: #fff;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+
+.logo {
+  width: 70px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1); /* logo hover effect */
+}
+
+.nav-items ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-items ul li {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-items ul li:hover {
+  color: #f0b33d; /* highlight on hover */
+}
+
+/* ===================================
+   🔍 SEARCH SECTION
+=================================== */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 400px;
+  max-width: 90%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 15px;
+  padding-right: 80px; /* space for search button */
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background-color: #f0b33d;
+  color: #fff;
+  border: none;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 0 16px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #d99c2b;
+}
+
+/* ===================================
+   🧰 FILTER & LOGIN BUTTONS
+=================================== */
+.filter-btn,
+.login-button,
+.Reset-btn {
+  padding: 8px;
+  background-color: #f0b33d;
+  color: #fff;
+  border: none;
+  border-radius: 45px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover,
+.login-button:hover,
+.Reset-btn:hover {
+  background-color: #d99a2c;
+}
+
+.login-button {
+  border-radius: 10px;
+  width: 80px;
+  font-size: 15px;
+}
+
+/* ===================================
+   🍽️ RESTAURANT CARD STYLES
+=================================== */
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+  gap: 20px;
+}
+
+.res-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 280px;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: border 0.2s ease;
+}
+
+.res-card:hover {
+  border: 1px solid #f0b33d;
+}
+
+.res-logo {
+  width: 100%;
+  height: 160px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.res-card h3,
+.res-card h4,
+.res-card p {
+  margin: 4px 0;
+}
+
+.cuisine {
+  font-size: 14px;
+  color: #555;
+  font-weight: 500;
+}
+.area{
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 10px;
+}
+.ratingContainer {
+  background-color: #1ba672;
+  font-size: 12px;
+  padding: 4px;
+  width: fit-content;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.costContainer ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 12px;
+  padding: 0;
+  color: #555;
+  list-style: inside;
+  width: 100%;
+}
+
+.res-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* ===================================
+   ✨ RESPONSIVE STYLES
+=================================== */
+@media (max-width: 768px) {
+  .Header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+    gap: 10px;
+  }
+
+  .nav-items ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .res-card {
+    width: 90%;
+  }
+
+  .search-box {
+    width: 90%;
+  }
+
+  .login-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 60px;
+  }
+
+  .res-logo {
+    height: 140px;
+  }
+
+  .search-input {
+    font-size: 14px;
+  }
+
+  .login-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .filter-btn {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+}
+
+/* ===================================
+   ✨ SHIMMER LOADING EFFECTS
+=================================== */
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.shimmer-card {
+  position: relative;
+  width: 280px;
+  height: 200px;
+  background-color: #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.shimmer-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150px;
+  height: 100%;
+  width: 150px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(300px);
+  }
+}
+.footer {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+/* ===================================
+   ✨ USER CARD
+=================================== */
+.user-card{
+ margin:10px auto;
+ padding: 8px;
+ max-width: 700px;
+ font-size: 12px;
+ font-weight: 600;
+ border: #000 solid 1px;
+ border-radius: 15px;
+}
