@@ -13,6 +13,7 @@ export const restaurantList = [
       cuisines: ["Burgers", "Rolls & Wraps", "Fast Food"],
       avgRating: 4.3,
       parentId: "547",
+      promoted: true,
       avgRatingString: "4.3",
       totalRatingsString: "5.0K+",
       sla: {
@@ -103,6 +104,7 @@ export const restaurantList = [
         "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/dfbcecfc-b380-4648-930a-b9b56b21e781_388372.JPG",
       locality: "Model Town CK DEL",
       areaName: "Model Town 3",
+      promoted: false,
       costForTwo: "₹250 for two",
       cuisines: [
         "Beverages",
@@ -212,6 +214,7 @@ export const restaurantList = [
       locality: "1St Phase",
       areaName: "Model Town 1",
       costForTwo: "₹400 for two",
+      promoted: false,
       cuisines: ["Bakery", "Desserts"],
       avgRating: 4.5,
       parentId: "1040",
@@ -322,6 +325,7 @@ export const restaurantList = [
         "RX_THUMBNAIL/IMAGES/VENDOR/2025/5/13/835e9d4e-aeff-4013-b10f-d01ba8e72757_810758.jpg",
       locality: "Main Market",
       areaName: "Model Town",
+      promoted: false,
       costForTwo: "₹400 for two",
       cuisines: [
         "Beverages",
@@ -440,6 +444,7 @@ export const restaurantList = [
         "RX_THUMBNAIL/IMAGES/VENDOR/2025/1/9/02a30a09-2b61-4b8b-818b-44fcdcd9b9fd_772028.JPG",
       locality: "Hudson Lane",
       areaName: "Vijay Nagar",
+      promoted: false,
       costForTwo: "₹400 for two",
       cuisines: ["American", "Fast Food"],
       avgRating: 4.5,
@@ -516,6 +521,7 @@ export const restaurantList = [
       locality: "Indira Nagar",
       areaName: "Adarsh Nagar",
       costForTwo: "₹350 for two",
+      promoted: true,
       cuisines: ["Burgers", "American"],
       avgRating: 4.4,
       parentId: "166",
@@ -607,6 +613,7 @@ export const restaurantList = [
       locality: "2nd Phase",
       areaName: "Model Town 2",
       costForTwo: "₹350 for two",
+      promoted: true,
       cuisines: ["sandwich", "Salads", "wrap", "Healthy Food"],
       avgRating: 4.1,
       parentId: "2",
@@ -697,6 +704,7 @@ export const restaurantList = [
         "RX_THUMBNAIL/IMAGES/VENDOR/2024/12/20/f3429117-6323-46e1-89c8-e55eb5198c5d_74717.jpg",
       locality: "Gujranwala Town",
       areaName: "Ashok Vihar",
+      promoted: true,
       costForTwo: "₹400 for two",
       cuisines: [
         "South Indian",
@@ -807,6 +815,7 @@ export const restaurantList = [
         "RX_THUMBNAIL/IMAGES/VENDOR/2025/6/14/29960941-c4fb-479f-9e5e-17267d8da82c_23846.JPG",
       areaName: "Kamla Nagar",
       costForTwo: "₹300 for two",
+      promoted: true,
       cuisines: ["Pizzas", "Italian", "Fast Food"],
       avgRating: 4.1,
       sla: {
@@ -820,6 +829,7 @@ export const restaurantList = [
       name: "Biryani Blues",
       cloudinaryImageId: "v1661979857/mfeyemlcgktkg8zav8g1.jpg",
       areaName: "Model Town",
+      promoted: true,
       costForTwo: "₹250 for two",
       cuisines: ["Biryani", "Mughlai", "Indian"],
       avgRating: 4.5,
@@ -835,6 +845,7 @@ export const restaurantList = [
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2025/6/24/5fed7dd1-8177-4861-94ee-e1549c130aec_1128944.jpg",
       areaName: " Punjabi Bagh",
+      promoted: false,
       costForTwo: "₹350 for two",
       cuisines: ["Burgers", "Fast Food", "Beverages"],
       avgRating: 4.0,
@@ -849,6 +860,7 @@ export const restaurantList = [
       name: "Haldiram's",
       cloudinaryImageId: "1abb89624b491497c8cff182d95ac457",
       areaName: "Rajpur Road",
+      promoted: true,
       costForTwo: "₹200 for two",
       cuisines: ["North Indian", "Sweets", "Street Food"],
       avgRating: 4.2,
@@ -859,12 +871,13 @@ export const restaurantList = [
   },
   {
     info: {
-      id: "100001",
+      id: "16865",
       name: "Pizza Hut",
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2025/6/9/106c06a7-14dc-4f94-9cbc-997f2b3dd0fe_10578.JPG",
       areaName: "Connaught Place",
       costForTwo: "₹500 for two",
+      promoted: false,
       cuisines: ["Pizzas", "Italian", "Fast Food"],
       avgRating: 4.0,
       sla: {
@@ -874,11 +887,12 @@ export const restaurantList = [
   },
   {
     info: {
-      id: "100002",
+      id: "25169",
       name: "Subway",
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2025/1/21/61b3972e-0a8f-4407-98ce-1d998169d73c_411229.JPG",
       areaName: "Karol Bagh",
+      promoted: true,
       costForTwo: "₹300 for two",
       cuisines: ["Healthy Food", "Salads", "Sandwiches"],
       avgRating: 3.9,
@@ -889,11 +903,12 @@ export const restaurantList = [
   },
   {
     info: {
-      id: "100003",
+      id: "244485",
       name: "Bikanervala",
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2024/12/20/14d68c58-764f-40fe-8fb4-f93e6e71ea00_40414.jpg",
       areaName: "Lajpat Nagar",
+      promoted: false,
       costForTwo: "₹250 for two",
       cuisines: ["North Indian", "Snacks", "Sweets"],
       avgRating: 4.4,
@@ -904,11 +919,12 @@ export const restaurantList = [
   },
   {
     info: {
-      id: "100004",
+      id: "804247",
       name: "McDonald's",
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2025/6/3/80755e1d-98a4-46bf-9ab5-4a3ea07d6d67_23741.jpg",
-      areaName: "Saket",
+      areaName: "Punjabi Bagh",
+      promoted: false,
       costForTwo: "₹400 for two",
       cuisines: ["Burgers", "Fast Food", "Beverages"],
       avgRating: 4.1,
@@ -919,10 +935,11 @@ export const restaurantList = [
   },
   {
     info: {
-      id: "100005",
+      id: "81276",
       name: "Behrouz Biryani",
       cloudinaryImageId: "a4ffed13eb197c6df43dfe1c756560e5",
       areaName: "Rohini",
+      promoted: false,
       costForTwo: "₹350 for two",
       cuisines: ["Biryani", "Kebabs", "Mughlai"],
       avgRating: 4.3,
@@ -933,11 +950,12 @@ export const restaurantList = [
   },
   {
     info: {
-      id: "100006",
+      id: "15502",
       name: "Wow! Momo",
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2025/6/9/28817914-e58a-400d-b89a-0fd75b405977_308457.JPG",
       areaName: "Janakpuri",
+      promoted: false,
       costForTwo: "₹200 for two",
       cuisines: ["Tibetan", "Snacks", "Asian"],
       avgRating: 4.0,
@@ -948,11 +966,12 @@ export const restaurantList = [
   },
   {
     info: {
-      id: "100007",
+      id: "569414",
       name: "RollsKing",
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2025/3/26/71647ca6-1823-46fd-8606-1819c2fa763e_985771.jpg",
       areaName: "Preet Vihar",
+      promoted: false,
       costForTwo: "₹220 for two",
       cuisines: ["Rolls", "Fast Food"],
       avgRating: 4.2,
@@ -963,11 +982,12 @@ export const restaurantList = [
   },
   {
     info: {
-      id: "100008",
+      id: "319912",
       name: "The Belgian Waffle",
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2025/6/16/0b8e709e-e19d-46f1-8745-28f9698178fb_31848.jpg",
       areaName: "Hauz Khas",
+      promoted: true,
       costForTwo: "₹180 for two",
       cuisines: ["Desserts", "Waffles", "Beverages"],
       avgRating: 4.5,
@@ -978,11 +998,12 @@ export const restaurantList = [
   },
   {
     info: {
-      id: "100009",
+      id: "15847",
       name: "Faasos",
       cloudinaryImageId: "af33b81798b11deba338e94b7585d348",
       areaName: "Rajouri Garden",
       costForTwo: "₹250 for two",
+      promoted: true,
       cuisines: ["Wraps", "North Indian", "Fast Food"],
       avgRating: 3.8,
       sla: {
@@ -992,10 +1013,11 @@ export const restaurantList = [
   },
   {
     info: {
-      id: "100010",
+      id: "140534",
       name: "Nirula's",
       cloudinaryImageId: "tsedcujivbntbyjxnki3",
       areaName: "Punjabi Bagh",
+      promoted: false,
       costForTwo: "₹280 for two",
       cuisines: ["Ice Cream", "Desserts", "Burgers"],
       avgRating: 4.0,

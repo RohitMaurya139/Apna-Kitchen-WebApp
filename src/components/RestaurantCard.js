@@ -50,4 +50,17 @@ const RestaurantCard = ({ resData }) => {
   );
 };
 
+
+export const withPromotedLabel = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <>
+        <label
+          className="absolute bg-gradient-to-r from-gray-800 via-gray-600 to-gray-400 text-white text-sm px-2 py-1 rounded-lg shadow-lg transition z-20"> Promoted</label>
+        <RestaurantCard {...props} />
+      </>
+    );
+  }
+}
+
 export default RestaurantCard;

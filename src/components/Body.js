@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard ,{withPromotedLabel} from "./RestaurantCard";
 import { restaurantList } from "../utils/mockData";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -11,6 +11,7 @@ const Body = () => {
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const onlineStatus = useOnlineStatus();
 
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
   useEffect(() => {
     setListOfRestaurants(restaurantList);
     setFilteredRestaurants(restaurantList);
@@ -55,7 +56,9 @@ const Body = () => {
               key={restaurant.info.id}
               className="w-full max-w-sm"
             >
-              <RestaurantCard resData={restaurant.info} />
+              {(restaurant.info.promoted)?
+              (<RestaurantCardPromoted resData={restaurant.info} />):
+              (<RestaurantCard resData={restaurant.info} />)}
             </Link>
           ))
         )}
