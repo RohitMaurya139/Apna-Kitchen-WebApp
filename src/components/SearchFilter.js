@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-
+import React, { useContext, useState } from "react";
+import UserContext from "../utils/UserContext";
 const SearchFilter = ({
   listOfRestaurants,
   onFilter,
   initialSearchText = "",
 }) => {
   const [searchText, setSearchText] = useState(initialSearchText);
-
+  const { loggedInUser,setUserName } = useContext(UserContext);
   // Handler for Search button click
   const handleSearch = () => {
     const filtered = listOfRestaurants.filter((res) =>
@@ -33,7 +33,7 @@ const SearchFilter = ({
 
   const handleFastDelivery = () => {
     const filtered = listOfRestaurants.filter(
-      (res) => res.info.sla.deliveryTime <= 35
+      (res) => res.info.sla.deliveryTime <= 20
     );
     onFilter(filtered);
   };
@@ -63,6 +63,12 @@ const SearchFilter = ({
       </div>
 
       {/* Filter Buttons */}
+      <div className="px-2 py-1 flex gap-1">
+        <label>userName : </label>
+        <input type="text" className="border-red-500 border-1 px-2 font-semibold"
+          value={loggedInUser}
+          onChange={(e) => setUserName(e.target.value)} />
+      </div>
       <div className="filter-container flex flex-wrap justify-center sm:justify-start gap-3">
         <button
           className="filter-btn bg-green-500 hover:bg-green-600 text-white px-2 py-1 w-fit text-sm rounded font-medium shadow transition-colors whitespace-nowrap"

@@ -1,32 +1,57 @@
-import { LOGO_URL } from "../utils/constant";
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import useOnlineStatus from "../utils/useOnlineStatus";
+// Import assets, icons, hooks, router utilities and context
+import { LOGO_URL } from "../utils/constant"; // Logo image URL
+import "@fortawesome/fontawesome-free/css/all.min.css"; // FontAwesome icons
 
+import { useEffect, useState, useContext } from "react"; // React hooks
+import { Link } from "react-router-dom"; // SPA navigation
+import useOnlineStatus from "../utils/useOnlineStatus"; // Custom online status hook
+import UserContext from "../utils/UserContext"; // App's user context
+import { useSelector } from "react-redux"; // Get redux state (cart items)
+
+/**
+ * Header Component
+ * ----------------
+ * Renders the top navigation bar
+ * - Shows logo (clickable)
+ * - Navigation links to main routes
+ * - Shows online/offline status
+ * - Uses context to show logged in user
+ * - Shows login/logout toggle button
+ * - Shows cart icon and current cart item count
+ */
 const Header = () => {
+  // Local state for Login/Logout button text
   const [btnName, setBtnName] = useState("Login");
-  console.log("header changed");
 
+  // Access user info from context
+  const { loggedInUser } = useContext(UserContext);
+
+  // Access Redux store to show current number of items in the shopping cart
+  const cartItems = useSelector((store) => store.cart.items);
+
+  // Debug: Log when the button changes (or when this effect reruns due to btnName dependency)
   useEffect(() => {
-    console.log("useEffect called");
+ console.log(btnName)
   }, [btnName]);
 
+  // Get live online/offline status from a custom hook
   const onlineStatus = useOnlineStatus();
 
+  // Main UI
   return (
-    <header className="bg-white shadow-md overflow-x-hidden" >
-      <div className="container mx-5 flex justify-between items-center py-4 px-6">
-        {/* Logo */}
+    <header className="bg-white shadow-md overflow-x-hidden ">
+      <div className="container mx-5 flex justify-between items-center py-4 px-6 ">
+        {/* Logo (clicks take you to homepage) */}
         <div className="logo-container">
           <Link to="/">
             <img className="w-24" src={LOGO_URL} alt="logo" />
           </Link>
         </div>
 
-        {/* Navigation */}
+        {/* Navigation Area */}
         <nav>
-          <ul className="flex items-center gap-6 text-gray-700 text-sm font-medium ">
+          <ul className="flex items-center gap-4 text-gray-700 text-sm font-medium ">
+            {/* Online Status */}
             <li className="flex items-center">
               {onlineStatus ? (
                 <span className="text-green-600 flex items-center gap-1">
@@ -39,6 +64,7 @@ const Header = () => {
               )}
             </li>
 
+            {/* Navigation Links */}
             <li>
               <Link
                 to="/"
@@ -72,6 +98,7 @@ const Header = () => {
               </Link>
             </li>
 
+            {/* Cart Section: with icon, item count (Redux) */}
             <li>
               <Link
                 to="/cart"
@@ -79,12 +106,16 @@ const Header = () => {
                 aria-label="Shopping Cart"
               >
                 <i className="fa-solid fa-cart-shopping"></i>
+                <span className="text-red-500 font-semibold">
+                  ({cartItems.length})
+                </span>
               </Link>
             </li>
 
-            <li className="mr-4 px-4">
+            {/* Login/Logout Toggle */}
+            <li className="px-1">
               <button
-                className="bg-yellow-500 w-22 hover:bg-yellow-600 text-white font-semibold text-[15px] rounded transition-colors duration-200 px-2 py-2 text-center"
+                className="hover:text-yellow-500 w-10 text-gray-600 font-semibold text-[15px]"
                 onClick={() =>
                   btnName === "Login"
                     ? setBtnName("Logout")
@@ -94,6 +125,9 @@ const Header = () => {
                 {btnName}
               </button>
             </li>
+
+            {/* Username from Context */}
+            <li className="px-2 font-bold">{loggedInUser}</li>
           </ul>
         </nav>
       </div>

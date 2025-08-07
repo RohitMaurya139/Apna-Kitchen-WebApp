@@ -1026,4 +1026,20 @@ export const restaurantList = [
       },
     },
   },
+  {
+    info: {
+      id: "251743",
+      name: "Keventers",
+      cloudinaryImageId:
+        "RX_THUMBNAIL/IMAGES/VENDOR/2025/7/15/d4392f05-e67b-40ea-9a54-75861df16ab9_1144923.jpg",
+      areaName: "Dwarka",
+      promoted: false,
+      costForTwo: "₹400 for two",
+      cuisines: ["Milkshakes", "Ice Cream", "Desserts"],
+      avgRating: 4.1,
+      sla: {
+        deliveryTime: 20,
+      },
+    },
+  },
 ];
